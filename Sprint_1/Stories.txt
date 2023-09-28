@@ -19,7 +19,7 @@ customer, the brokers. This will enable the system to ensure that brokers are ve
 can reliably book appointments to view the property.
 
 
-Story 3: System Administrator(s)
+Story 3: -	CRUD operations on properties
 
 The system administrator needs to have access mainly to broker information and is able to accept or reject brokers, as well as 
 information from other users in case there is a need for CRUD in their case. Therefore, he/she must have access to data that 
@@ -30,7 +30,7 @@ allow the system administrator to solve problems within the system. We consider 
 expertise in the software, so a friendly user interface is not necessary. However, this user should be chosen with care and his
  or her background should be checked, as he or she will have access to customer information.
 
-Story 4: Real-State Brokers/landlord
+Story 4: CRUD operations on brokers
 Brokers/Landlord must be able to post new offers on the page. These offers must contain the option to add a title, at least 4 images
 and a space to include a large description of the rental/real estate property. There must also be a selection option to choose between
 renting or selling houses. There must also be a selection option during the post creation process to include which type of rental property 
