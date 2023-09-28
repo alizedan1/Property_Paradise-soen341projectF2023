@@ -12,7 +12,7 @@ to a computer and basic knowledge.
 Story 2: Request for Visits for Properties
 
 The renter has similar needs to the homebuyer, must be able to search the different types of properties and have different 
-filters than the homebuyer. He/she can request an appointment to view the property. If an account is created in the system 
+filters than the homebuyer such as price range/ included amenities, electricity, internet. He/she can request an appointment to view the property. If an account is created in the system 
 this user will be able to have favorite properties, to be able to compare their different options. He will be able to search 
 for brokers. But he will not have a mortgage calculator as he does not need this utility. So the important thing for this user, 
 who is one of our main clients, is to have an easy to use interface and to provide all the basic functionalities to the user 
@@ -31,5 +31,6 @@ allow the system administrator to solve problems within the system. We consider 
 expertise in the software, so a friendly user interface is not necessary. However, this user should be chosen with care and his
  or her background should be checked, as he or she will have access to customer information.
 
-Story 4: Real-State Brokers
+Story 4: Real-State Brokers/landlord
+Brokers/Landlord must be able to post new offers on the page. These offers must contain the option to add a title, at least 4 images and a space to include a large description of the rental/real estate property. There must also be a selection option to choose between renting or selling houses. There must also be a selection option during the post creation process to include which type of rental property it is (condo, appartment, house, mansion). Once the post is created, there will need to be an option to edit your post which will allow the user to modify the title, images and description. Finally the user should have the option to delete the post. 
 
