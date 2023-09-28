@@ -6,8 +6,8 @@ Story 1: Search for Properties
 The property search is going to be used by two types of users such as homebuyers and property renters. This is the core of
 the website, as it is the main function that customers will use. Next, this property search function will need filters such
 as rent or buy, location, price range, number of bedrooms, dimensions, release date, property year, and property 
-type (condos, single-family homes, duplexes, etc.), broker. A user-friendly interface will be needed, as it will be used by the 
-average user with access to a computer and basic knowledge.
+type (condos, single-family homes, duplexes, etc.), broker. If it is rented it will have additional things such as included amenities, electricity, and internet. A user-friendly interface will be needed, as it will be used by 
+the average user with access to a computer and basic knowledge.
 
 Story 2: Request for Visits for Properties
 
@@ -18,8 +18,6 @@ not only to request a visit but also to bookmark properties. This will enable be
 better communication with customers who want to rent or buy, with our other type of customer, the brokers. This will enable 
 the system to ensure that brokers are vetted and that property buyers and renters can reliably book appointments to view the 
 property.
-
-
 
 
 Story 3: System Administrator(s)
