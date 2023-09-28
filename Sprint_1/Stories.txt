@@ -23,6 +23,12 @@ website. Therefore, this is the initial proposal with what the software for the 
 
 Story 2: Property renters
 
+The renter has similar needs to the homebuyer, must be able to search the different types of properties and have different 
+filters than the homebuyer. He/she can request an appointment to view the property. If an account is created in the system 
+this user will be able to have favorite properties, to be able to compare their different options. He will be able to search 
+for brokers. But he will not have a mortgage calculator as he does not need this utility. So the important thing for this user, 
+who is one of our main clients, is to have an easy to use interface and to provide all the basic functionalities to the user 
+and help him find a property to rent. 
 
 
 
