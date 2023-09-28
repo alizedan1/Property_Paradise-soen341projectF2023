@@ -1,4 +1,4 @@
-Stories for 4 different types of users, this will allow the members of the team to know the different requirements of the
+Stories for 4 different types of users, will allow the members of the team to know the different requirements of the
 different users and help for the sprints to come.
 
 Story 1: Search for Properties
@@ -9,7 +9,7 @@ as location, price range, number of bedrooms, dimensions, release date, property
 family homes, duplexes, etc.). A user-friendly interface will be needed, as it will be used by the average user with access
 to a computer and basic knowledge.
 
-Story 2: Property renters
+Story 2: Request for Visits for Properties
 
 The renter has similar needs to the homebuyer, must be able to search the different types of properties and have different 
 filters than the homebuyer. He/she can request an appointment to view the property. If an account is created in the system 
