@@ -34,6 +34,14 @@ and help him find a property to rent.
 
 Story 3: System Administrator(s)
 
+The system administrator needs to have access mainly to broker information and is able to accept or reject brokers, as well as 
+information from other users in case there is a need for CRUD in their case. Therefore, he/she must have access to data that 
+allows identifying the broker and verifying that it is indeed a trusted broker.  The database that will be used to give you 
+access in this case is firebase. In this database you will be able to create, read, update and delete. Therefore, you must have 
+privileged access to the system. In this case a friendly user interface is not really necessary, since the important thing is to 
+allow the system administrator to solve problems within the system. We consider that this type of user has a higher degree of 
+expertise in the software, so a friendly user interface is not necessary. However, this user should be chosen with care and his
+ or her background should be checked, as he or she will have access to customer information.
 
 Story 4: Real-State Brokers
 
