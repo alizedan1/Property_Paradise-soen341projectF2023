@@ -13,7 +13,7 @@ etc.), and other user tools if needed.
 
 The software will offer this user the ability to search for brokers, monthly payment calculators, and contacts to view 
 properties or request a visit button. This type of user will not necessarily need an account to use the site, as there will be
-a place where you can put the name, email, and phone number to be contacted by the broker to schedule a visit.
+a place where you can put your name, email, and phone number to be contacted by the broker to schedule a visit.
 
 Ultimately, this may change in the future, but these are the basic needs that the Homebuyers type of user will need on the
 website. Therefore, this is the initial proposal with what the software for the user (Homebuyer) will start to be created.
