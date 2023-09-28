@@ -11,6 +11,14 @@ to a computer and basic knowledge.
 
 Story 2: Request for Visits for Properties
 
+In this case, users such as property buyers and tenants must be able to request property viewings. In this case, to access 
+this feature, we will require the user to create an account. In this case, to access this feature, we will ask the user to 
+create an account that will enable them not only to request a visit but also to bookmark properties. This will enable them 
+not only to request a visit but also to bookmark properties. This will enable better management of visit requests. And 
+better communication with customers who want to rent or buy, with our other type of customer, the brokers. This will enable 
+the system to ensure that brokers are vetted and that property buyers and renters can reliably book appointments to view the 
+property.
+
 The renter has similar needs to the homebuyer, must be able to search the different types of properties and have different 
 filters than the homebuyer such as price range/ included amenities, electricity, internet. He/she can request an appointment to view the property. If an account is created in the system 
 this user will be able to have favorite properties, to be able to compare their different options. He will be able to search 
