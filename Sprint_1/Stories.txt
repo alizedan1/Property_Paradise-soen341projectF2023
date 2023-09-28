@@ -1,25 +1,13 @@
 Stories for 4 different types of users, this will allow the members of the team to know the different requirements of the
 different users and help for the sprints to come.
 
-Story 1: Homebuyers
+Story 1: Search for Properties
 
-This type of user is a customer and therefore needs a user-friendly interface that is attractive to them. It should be
-designed keeping in mind that this user is an average adult who has access to a computer. Therefore, it should be kept in
-mind that this user's only intention is to look for homes and that the user should not have any software-related problems
-as this is the type of user is the one that will be using most of the site, and their needs come first.
-
-Some of the tools that will be provided to them are those that allow them to search for properties based on location, price
-range, number of bedrooms, dimensions, time of listing, property year, property type (Condo, Single Family Homes, Duplexes,
-etc.), and other user tools if needed.
-
-The software will offer this user the ability to search for brokers, monthly payment calculators, and contacts to view 
-properties or request a visit button. This type of user will not necessarily need an account to use the site, as there will be
-a place where you can put your name, email, and phone number to be contacted by the broker to schedule a visit.
-If user wants to have favourites properties in that case the creation will be needed.
-
-Ultimately, this may change in the future, but these are the basic needs that the Homebuyers type of user will need on the
-website. Therefore, this is the initial proposal with what the software for the user (Homebuyer) will start to be created.
-
+The property search is going to be used by two types of users such as homebuyers and property renters. This is the core of
+the website, as it is the main function that customers will use. Next, this property search function will need filters such
+as location, price range, number of bedrooms, dimensions, release date, property year, and property type (condos, single-
+family homes, duplexes, etc.). A user-friendly interface will be needed, as it will be used by the average user with access
+to a computer and basic knowledge.
 
 Story 2: Property renters
 
