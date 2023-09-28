@@ -1,1 +1,13 @@
+Stories for 4 different types of users.
+
+Story 1: Homebuyers
+
+
+Story 2: Property renters
+
+
+Story 3: System Administrator(s)
+
+
+Story 4: Real-State Brokers
 
