@@ -19,7 +19,7 @@ customer, the brokers. This will enable the system to ensure that brokers are ve
 can reliably book appointments to view the property.
 
 
-Story 3: -	CRUD operations on properties
+Story 3: CRUD operations on properties
 
 The system administrator needs to have access mainly to broker information and is able to accept or reject brokers, as well as 
 information from other users in case there is a need for CRUD in their case. Therefore, he/she must have access to data that 
