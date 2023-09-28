@@ -1,1 +1,41 @@
 
+LogIn page:
+1. Create a input box of email and password. 
+2. Create a button of Sign Up 
+3. Create a button for buyers and one for brokers/sellers
+4. Authenticate the user 
+5. Bring the user to the home page 
+
+Signup page: 
+
+1. Create an input box for name, last name, phone number and email.
+2. Create a selection box if user is a broker or a buyer. 
+3. Authenticate the user using firebase 
+4. Create a javascript function to keep track of the state of the user (broker/renter)  
+4. Create the user in the firestore database each in different document object depending on its state. 
+
+
+
+
+
+Search for properties: 
+
+1. Create a search bar using frontend frameworks in our case, HTML and CSS. 
+2. Add boutons for filter options, HTML and CSS. 
+3. Use javascript and jquery to send the query containing the search request and the filters to firebase backedn cloud functions. 1 hour
+4. Code cloud functions to filter and return only the requested filtered JSON objects. 
+5. Display the properties that are returned by the server using javascript and jquery. 
+
+Request visits for properties: 
+
+1. Create a button for visit request and sends user to a new page. HTML and CSS. 
+2. Create input boxes for the email, name and last name, phone number of the user. 
+3. Create a button for confirmation and send the email to the broker of the property. 
+4. Send a default email modifiying the contact information retrieving it from the database. 
+
+CRUD for properties: 
+
+
+
+Save favourites: 
+
