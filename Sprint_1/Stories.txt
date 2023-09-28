@@ -6,7 +6,7 @@ Story 1: Search for Properties
 The property search is going to be used by two types of users such as homebuyers and property renters. This is the core of
 the website, as it is the main function that customers will use. Next, this property search function will need filters such
 as rent or buy, location, price range, number of bedrooms, dimensions, release date, property year, and property 
-type (condos, single-family homes, duplexes, etc.), broker. If it is rented it will have additional things such as included amenities, electricity, and internet. A user-friendly interface will be needed, as it will be used by 
+type (condos, single-family homes, duplexes, etc.), and search brokers. These users would be able to put properties on favorites, and homebuyers especially will be able to calculate monthly payments based on loan amount and interest rate. If it is rented it will have additional things such as included amenities, electricity, and internet. A user-friendly interface will be needed, as it will be used by 
 the average user with access to a computer and basic knowledge.
 
 Story 2: Request for Visits for Properties
@@ -21,6 +21,15 @@ can reliably book appointments to view the property.
 
 Story 3: CRUD operations on properties
 
+Brokers/Landlord must be able to post new offers on the page. These offers must contain the option to add a title, at least 4 images
+and a space to include a large description of the rental/real estate property. There must also be a selection option to choose between
+renting or selling houses. There must also be a selection option during the post creation process to include which type of rental property 
+it is (condo, appartment, house, mansion). Once the post is created, there will need to be an option to edit your post which will allow the
+user to modify the title, images and description. Finally the user should have the option to delete the post. 
+
+
+Story 4: CRUD operations on brokers
+
 The system administrator needs to have access mainly to broker information and is able to accept or reject brokers, as well as 
 information from other users in case there is a need for CRUD in their case. Therefore, he/she must have access to data that 
 allows identifying the broker and verifying that it is indeed a trusted broker.  The database that will be used to give you 
@@ -29,11 +38,4 @@ privileged access to the system. In this case a friendly user interface is not r
 allow the system administrator to solve problems within the system. We consider that this type of user has a higher degree of 
 expertise in the software, so a friendly user interface is not necessary. However, this user should be chosen with care and his
  or her background should be checked, as he or she will have access to customer information.
-
-Story 4: CRUD operations on brokers
-Brokers/Landlord must be able to post new offers on the page. These offers must contain the option to add a title, at least 4 images
-and a space to include a large description of the rental/real estate property. There must also be a selection option to choose between
-renting or selling houses. There must also be a selection option during the post creation process to include which type of rental property 
-it is (condo, appartment, house, mansion). Once the post is created, there will need to be an option to edit your post which will allow the
-user to modify the title, images and description. Finally the user should have the option to delete the post. 
 
