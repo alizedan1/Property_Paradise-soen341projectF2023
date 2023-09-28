@@ -35,6 +35,22 @@ Request visits for properties:
 
 CRUD for properties: 
 
+1. Create a page where the broker can perform CRUD operations for his properties. 
+2. Create a button for create a new property. 
+3. Create input boxes for all information of the property including if it is a rental or a for sale. 
+4. Create an edit and delete button for each property that he owns. 
+5. Confirmation pop up if the user chooses to delete 
+5. When the property is edited, update firestore. 
+6. When the property is deleted, deleted form firestore. 
+
+CRUD operations for brokers: 
+
+1. Admin has a username and email and it is added in a document in firebase 
+2. Authenticate and email matches the one in the firestore
+3. Home page of admin displays all the pending broker applications 
+4. Admin can click on the broker and can either approve or deny or edit application. 
+5. Update database accordingly 
+
 
 
 Save favourites: 
