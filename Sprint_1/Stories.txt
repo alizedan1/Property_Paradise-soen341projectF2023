@@ -32,5 +32,9 @@ expertise in the software, so a friendly user interface is not necessary. Howeve
  or her background should be checked, as he or she will have access to customer information.
 
 Story 4: Real-State Brokers/landlord
-Brokers/Landlord must be able to post new offers on the page. These offers must contain the option to add a title, at least 4 images and a space to include a large description of the rental/real estate property. There must also be a selection option to choose between renting or selling houses. There must also be a selection option during the post creation process to include which type of rental property it is (condo, appartment, house, mansion). Once the post is created, there will need to be an option to edit your post which will allow the user to modify the title, images and description. Finally the user should have the option to delete the post. 
+Brokers/Landlord must be able to post new offers on the page. These offers must contain the option to add a title, at least 4 images
+and a space to include a large description of the rental/real estate property. There must also be a selection option to choose between
+renting or selling houses. There must also be a selection option during the post creation process to include which type of rental property 
+it is (condo, appartment, house, mansion). Once the post is created, there will need to be an option to edit your post which will allow the
+user to modify the title, images and description. Finally the user should have the option to delete the post. 
 
