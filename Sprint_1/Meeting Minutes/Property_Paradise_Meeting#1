@@ -1,0 +1,22 @@
+Date of meeting: 13-09-2023 16h30-17h20 
+
+Attending: 
+Ali Zedan 
+Ryan Rebbas 
+Kevin Alfredo Jimenez Recinos
+Georges Ogeil
+
+Points discussed during meeting: 
+
+1. Technologies used, bootstrap for the layoutb of the website. HTML and CSS for the frontend display and javascript for the frontend functionalities. 
+2. For the database we discussed which ones to use, Ali proposed SQL and Mongo. Ryan proposed Firebase since it is much more manageable and it uses 
+cloud functionalities. The team decided to go with firebase as a database. 
+3. We created the github repo during this meeting 
+
+Next meeting objectives: 
+
+1-Task breakdown for sprint 1
+2-Log in the meeting minutes 
+3- Check up on if the repo and the stakeholder (teacher) has been added 
+
+
