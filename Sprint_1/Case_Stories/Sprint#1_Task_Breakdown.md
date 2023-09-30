@@ -32,3 +32,4 @@ Name: Georges
 ----------------------------------
 
 |Task:                                                              | Story Points: |    Status:|
+- Wiki for sprint 1 and planning for wiki sprint 2                          0             Done
