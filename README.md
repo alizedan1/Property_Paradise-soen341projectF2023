@@ -15,13 +15,14 @@ We will utilize firebase for the user registration/authentication (sign up/ sign
 
 
 3. TEAM MEMBERS AND ROLES
-   Ali Zedan: Scrum Master + Development Team
+   -------------------------------
+   |Ali Zedan | Scrum Master + Development Team
    
-   Ryan Rebbas: Team Leader + Development Team (Backend manager)
+   Ryan Rebbas| Team Leader + Development Team (Backend manager)
    
-   Georges Ogeil: Development team (Frontend)
+   Georges Ogeil| Development team (Frontend)
    
-   Kevin Alfredo Jimenez Recinos: Development team (Frontend)
+   Kevin Alfred| Jimenez Recinos: Development team (Frontend)
 
 
 
