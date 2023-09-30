@@ -1,12 +1,32 @@
 Name: Ali Zedan 
 -----------------------------------
-|Task:                             | Story Points: |    Status:| 
+|Task:                                                | Story Points:             |    Status:
 -----------------------------------------
-- Create GIT repo                       0          |     Done   |
--Invite Team members and stakeholder    0           |     Done   |
--
--
--
--
--
--
+- Create GIT repo                                             0                         Done   
+- Invite Team members and stakeholder                         0                         Done   
+- Create the task breakdown folder                            1                         Done 
+- Do the team meeting minutes                                 0                         Done 
+- Create the README and describe the project                  0                         Done 
+
+
+Name: Ryan Rebbas
+----------------------------------
+
+|Task:                                                              | Story Points: |    Status:|
+-------------------------------------------
+- Assign the task for each team member to accomplish on the project      0          Done
+- Write the Approach and Technology on the read me file                  1          Done
+- Contribute to the User Story                                           1          Done
+
+
+Name: Kevin
+----------------------------------
+
+|Task:                                                              | Story Points: |    Status:|
+
+
+
+Name: Goerge
+----------------------------------
+
+|Task:                                                              | Story Points: |    Status:|
