@@ -23,9 +23,9 @@ Name: Ryan Rebbas
 Name: Kevin
 ----------------------------------
 
-|Task:                                                              | Story Points: |    Status:|
-- Create user stories with requirements and priority                     3                Done
-- Create teammate's contribution folder with time stamps                 1                Done
+|Task:                                                                            | Story Points: |    Status:|
+- Create user stories with requirements and priorities of Stakeholder                      3                Done
+- Create teammate's contribution folder with time stamps                                   1                Done
 
 
 Name: Georges
