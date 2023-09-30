@@ -1,0 +1,55 @@
+LogIn page:
+1. Create a input box of email and password. 
+2. Create a button of Sign Up 
+3. Create a button for buyers and one for brokers/sellers
+4. Authenticate the user 
+5. Bring the user to the home page 
+
+Signup page: 
+
+1. Create an input box for name, last name, phone number and email.
+2. Create a selection box if user is a broker or a buyer. 
+3. Authenticate the user using firebase 
+4. Create a javascript function to keep track of the state of the user (broker/renter)  
+4. Create the user in the firestore database each in different document object depending on its state. 
+
+
+
+
+
+Search for properties: 
+
+1. Create a search bar using frontend frameworks in our case, HTML and CSS. 
+2. Add boutons for filter options, HTML and CSS. 
+3. Use javascript and jquery to send the query containing the search request and the filters to firebase backedn cloud functions. 1 hour
+4. Code cloud functions to filter and return only the requested filtered JSON objects. 
+5. Display the properties that are returned by the server using javascript and jquery. 
+
+Request visits for properties: 
+
+1. Create a button for visit request and sends user to a new page. HTML and CSS. 
+2. Create input boxes for the email, name and last name, phone number of the user. 
+3. Create a button for confirmation and send the email to the broker of the property. 
+4. Send a default email modifiying the contact information retrieving it from the database. 
+
+CRUD for properties: 
+
+1. Create a page where the broker can perform CRUD operations for his properties. 
+2. Create a button for create a new property. 
+3. Create input boxes for all information of the property including if it is a rental or a for sale. 
+4. Create an edit and delete button for each property that he owns. 
+5. Confirmation pop up if the user chooses to delete 
+5. When the property is edited, update firestore. 
+6. When the property is deleted, deleted form firestore. 
+
+CRUD operations for brokers: 
+
+1. Admin has a username and email and it is added in a document in firebase 
+2. Authenticate and email matches the one in the firestore
+3. Home page of admin displays all the pending broker applications 
+4. Admin can click on the broker and can either approve or deny or edit application. 
+5. Update database accordingly 
+
+
+
+Save favourites: 
