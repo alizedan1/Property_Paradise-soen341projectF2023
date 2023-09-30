@@ -1,3 +1,4 @@
+
 # SOEN341_Real_Estate_Project
 
 1. PROJECT DESCRIPTION
@@ -15,8 +16,11 @@ We will utilize firebase for the user registration/authentication (sign up/ sign
 
 3. TEAM MEMBERS AND ROLES
    Ali Zedan: Scrum Master + Development Team
+   
    Ryan Rebbas: Team Leader + Development Team (Backend manager)
+   
    Georges Ogeil: Development team (Frontend)
+   
    Kevin Alfredo Jimenez Recinos: Development team (Frontend)
 
 
