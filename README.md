@@ -16,7 +16,8 @@ Ideally a page written in HTML/CSS. We can later use javascript for additional f
 We will utilize firebase for the user registration/authentication (sign up/ sign in process), data storage and we could utilize firebase cloud functions if need be ustilizing Node.js as the backend framework.
 
 
-3. TEAM MEMBERS AND ROLES
+
+2. TEAM MEMBERS AND ROLES 
    -------------------------------
    Ali Zedan | Scrum Master + Development Team
    
