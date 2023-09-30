@@ -24,8 +24,8 @@ Name: Kevin
 ----------------------------------
 
 |Task:                                                                            | Story Points: |    Status:|
-- Create user stories with requirements and priorities of Stakeholder                      3                Done
-- Create teammate's contribution folder with time stamps                                   1                Done
+- Create user stories with requirements and priorities of Stakeholder                      1                Done
+- Create teammate's contribution folder with time stamps                                   0                Done
 
 
 Name: Georges
