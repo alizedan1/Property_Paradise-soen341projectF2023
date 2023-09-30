@@ -6,7 +6,8 @@ Name: Ali Zedan
 - Invite Team members and stakeholder                         0                         Done   
 - Create the task breakdown folder                            1                         Done 
 - Do the team meeting minutes                                 0                         Done 
-- Create the README and describe the project                  0                         Done 
+- Create the README and describe the project                  0                         Done
+- Create the team members and their roles in readme           0                         Done 
 
 
 Name: Ryan Rebbas
@@ -26,7 +27,7 @@ Name: Kevin
 
 
 
-Name: Goerge
+Name: Georges
 ----------------------------------
 
 |Task:                                                              | Story Points: |    Status:|
