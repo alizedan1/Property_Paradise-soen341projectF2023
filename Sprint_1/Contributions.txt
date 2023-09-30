@@ -1,13 +1,74 @@
-Contributions of Team Members:
+---------------------------------------------
+Team Contribution Log
+---------------------------------------------
 
-Readme File:
+[Ali Zedan]
 
+[Sep-14]
+- [4:15 pm]: [GitHub repertory creation and added team members, meeting with teammates to plan sprint 1 & talk about software to be used]
+- Time Spent: [1h-2h]
 
-Wiki:
+[Sep-21]
+- [4:15 pm]: [Readme file update (Description of Project)]
+- Time Spent: [1h-2h]
 
+[Sep-28]
+- [4:15 pm]: [Task_Break down commit on GitHub in details of what was talked about in week 1, confirm tasks and software to be used for sprint 2]
+- Time Spent: [2h-3h]
 
+[Sep-29]
+- [1:00 pm]: [Description of meeting minutes in detail]
+- Time Spent: [1h-2h]
+---------------------------------------------
+[Ryan Rebbas]
 
-Stories:
+[Sep-14]
+- [4:15 pm]: [Creation of WhatsApp group to contact team members, meeting with teammates to plan sprint 1 & talk about software to be used]
+- Time Spent: [1h-2h]
 
+[Sep-21]
+- [4:15 pm]: [Readme file update (Description of front end, back end frameworks that will be used )]
+- Time Spent: [1h-2h]
 
+[sep-28]
+- [4:15 pm]: [Added one of the stories for sprint 1, and checked with team members everything was mentioned in stories & confirmed tasks and software to be used for sprint 2]
+- Time Spent: [2h]
+
+---------------------------------------------
+[Georges Ogeil]
+
+[Sep-14]
+- [4:15 pm]: [meeting with teammates to plan sprint 1 & talk about software to be used]
+- Time Spent: [1h-2h]
+
+[Sep-21]
+- [4:15 pm]: [Continued to work on the wiki for sprints 1 and 2]
+- Time Spent: [1h-2h]
+
+[Sep-28]
+- [4:15 pm]: [Continued to work on final details of the wiki for sprints 1 and 2 & confirm tasks and software to be used for sprint 2]
+- Time Spent: [2h-3h]
+
+[Sep-29]
+- [10:00 pm]: [Commit wiki of sprint 2 planning]
+- Time Spent: [1h]
+
+---------------------------------------------
+[Kevin Alfredo Jimenez Recinos]
+
+[Sep-14]
+- [4:15 pm]: [meeting with teammates to plan sprint 1 & talk about software to be used]
+- Time Spent: [1h-2h]
+
+[Sep-21]
+- [4:15 pm]: [Continue to work on stories and requirements of stakeholders]
+- Time Spent: [1h-2h]
+
+[Sep-28]
+- [4:15 pm]: [Finish stories of users and check with team members that all requirements and priorities of stakeholders are taken into account]
+- Time Spent: [2h-3h]
+
+[Sep-29]
+- [6:00 pm]: [Finish up time stamps for team contributions file]
+- Time Spent: [1h]
 
