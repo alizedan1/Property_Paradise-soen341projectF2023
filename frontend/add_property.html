@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add New Property</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Broker Portal</a>
+    </nav>
+
+    <header class="container mt-5 text-center">
+         <!-- Check if user is signed in -->
+        <!-- 
+        <script>
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    // User is signed in
+                    console.log('User is signed in:', user.displayName);
+                } else {
+                    // User is not signed in
+                    console.log('User is not signed in');
+                }
+            });
+        </script>
+        -->
+        <h1>Add New Property</h1>
+        <p>Provide all the details of the Property</p>
+    </header>
+
+    <!-- Property details Form more can be added in the future-->
+    <div class="container mt-5">
+        <form id="propertyForm">
+            <div class="form-group">
+                <label for="rentOrBuy">Rent or Buy</label>
+                <select class="form-control" id="rentOrBuy" name="rentOrBuy" required>
+                    <option value="Rent">Rent</option>
+                    <option value="Buy">Buy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="bedrooms">Number of Bedrooms</label>
+                <input type="number" class="form-control" id="bedrooms" name="bedrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="dimensions">Dimensions</label>
+                <input type="text" class="form-control" id="dimensions" name="dimensions" required>
+            </div>
+            <div class="form-group">
+                <label for="releaseDate">Release Date</label>
+                <input type="date" class="form-control" id="releaseDate" name="releaseDate" required>
+            </div>
+            <div class="form-group">
+                <label for="propertyYear">Property Year</label>
+                <input type="number" class="form-control" id="propertyYear" name="propertyYear" required>
+            </div>
+            <div class="form-group">
+                <label for="propertyType">Property Type</label>
+                <input type="text" class="form-control" id="propertyType" name="propertyType" required>
+            </div>
+            <div class="form-group">
+                <label for="brokerName">Broker's Name</label>
+                <input type="text" class="form-control" id="brokerName" name="brokerName" required>
+            </div>
+            <div class="form-group">
+                <label for="propertyTitle">Property Title</label>
+                <input type="text" class="form-control" id="propertyTitle" name="propertyTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="propertyImages">Images of Property (select multiple)</label>
+                <input type="file" class="form-control-file" id="propertyImages" name="propertyImages" accept="image/*" multiple required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="container mt-3 text-center">
+        <a href="broker.html" class="btn btn-secondary">Return to My Properties</a>
+    </div>
+
+    <!-- JavaScript to send submission to firebase-->
+<script>
+   document.getElementById('propertyForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var rentOrBuy = document.getElementById('rentOrBuy').value;
+    var location = document.getElementById('location').value;
+    var price = document.getElementById('price').value;
+    var bedrooms = document.getElementById('bedrooms').value;
+    var dimensions = document.getElementById('dimensions').value;
+    var releaseDate = document.getElementById('releaseDate').value;
+    var propertyYear = document.getElementById('propertyYear').value;
+    var propertyType = document.getElementById('propertyType').value;
+    var brokerName = document.getElementById('brokerName').value;
+    var propertyTitle = document.getElementById('propertyTitle').value;
+
+    // Get selected image files
+    var propertyImages = document.getElementById('propertyImages').files;
+    var imageUrls = [];
+
+    // Function to handle image upload and get download URL
+    function uploadImage(imageFile) {
+        var storageRef = firebase.storage().ref('property_images/' + imageFile.name);
+
+        storageRef.put(imageFile).then(function(snapshot) {
+            snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                imageUrls.push(downloadURL);
+                if (imageUrls.length === propertyImages.length) {
+                    var propertyData = {
+                        rentOrBuy: rentOrBuy,
+                        location: location,
+                        price: price,
+                        bedrooms: bedrooms,
+                        dimensions: dimensions,
+                        releaseDate: releaseDate,
+                        propertyYear: propertyYear,
+                        propertyType: propertyType,
+                        brokerName: brokerName,
+                        propertyTitle: propertyTitle,
+                        propertyImages: imageUrls
+                    };
+
+                    // Send data to Firebase
+                    var propertyRef = firebase.database().ref('properties').push(propertyData);
+                    var propertyId = propertyRef.key;
+
+                    alert('Property added successfully!');
+                }
+            });
+        });
+    }
+
+    // Upload each selected image
+    for (var i = 0; i < propertyImages.length; i++) {
+        uploadImage(propertyImages[i]);
+    }
+});
+    </script>
+    <script src="firebase-config.js"></script>
+    <script src="property.js"></script>
+    <script src="broker.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"></script>
+</body>
+</html>
