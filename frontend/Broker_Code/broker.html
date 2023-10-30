@@ -30,6 +30,25 @@
             });
         </script>
         -->
+<!--<?php
+session_start();
+// checks if the user is logged in
+if (!isset($_SESSION['loggedin'])) {
+    // User is not logged in, redirect to the login page
+    header("Location: B_Log_In.php");
+    exit;
+}
+?>
+       // destroys session
+        <a href="B_log_out.php">logout</a>
+<?php
+session_start();
+session_destroy();
+header("Location: B_Log_In.php"); // Redirect to the login page after logout
+exit;
+?>
+
+        -->
     </header>
 
     <div class="container mt-3 text-center">
