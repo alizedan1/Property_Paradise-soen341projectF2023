@@ -92,65 +92,64 @@
         <a href="broker.html" class="btn btn-secondary">Return to My Properties</a>
     </div>
 
-    <!-- JavaScript to send submission to firebase-->
-<script>
-   document.getElementById('propertyForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+    <script>
+        document.getElementById('propertyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var rentOrBuy = document.getElementById('rentOrBuy').value;
+            var location = document.getElementById('location').value;
+            var price = document.getElementById('price').value;
+            var bedrooms = document.getElementById('bedrooms').value;
+            var dimensions = document.getElementById('dimensions').value;
+            var releaseDate = document.getElementById('releaseDate').value;
+            var propertyYear = document.getElementById('propertyYear').value;
+            var propertyType = document.getElementById('propertyType').value;
+            var brokerName = document.getElementById('brokerName').value;
+            var propertyTitle = document.getElementById('propertyTitle').value;
+            var description = document.getElementById('description').value;
+            var propertyImages = document.getElementById('propertyImages').files;
+            var imageUrls = [];
+            
+            function uploadImage(imageFile) {
+                var storageRef = firebase.storage().ref('property_images/' + imageFile.name);
+                storageRef.put(imageFile).then(function(snapshot) {
+                    snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                        imageUrls.push(downloadURL);
+                        if (imageUrls.length === propertyImages.length) {
+                            var propertyData = {
+                                rentOrBuy: rentOrBuy,
+                                location: location,
+                                price: price,
+                                bedrooms: bedrooms,
+                                dimensions: dimensions,
+                                releaseDate: releaseDate,
+                                propertyYear: propertyYear,
+                                propertyType: propertyType,
+                                brokerName: brokerName,
+                                propertyTitle: propertyTitle,
+                                description: description,
+                                propertyImages: imageUrls
+                            };
 
-    var rentOrBuy = document.getElementById('rentOrBuy').value;
-    var location = document.getElementById('location').value;
-    var price = document.getElementById('price').value;
-    var bedrooms = document.getElementById('bedrooms').value;
-    var dimensions = document.getElementById('dimensions').value;
-    var releaseDate = document.getElementById('releaseDate').value;
-    var propertyYear = document.getElementById('propertyYear').value;
-    var propertyType = document.getElementById('propertyType').value;
-    var brokerName = document.getElementById('brokerName').value;
-    var propertyTitle = document.getElementById('propertyTitle').value;
+                            db.collection('properties').add(propertyData)
+                                .then(function(docRef) {
+                                    console.log('Property added and Has ID: ', docRef.id);
+                                    alert('Property was added successfully!');
+                                })
+                                .catch(function(error) {
+                                    console.error('Error while adding property: ', error);
+                                });
+                        }
+                    });
+                });
+            }
 
-    // Get selected image files
-    var propertyImages = document.getElementById('propertyImages').files;
-    var imageUrls = [];
-
-    // Function to handle image upload and get download URL
-    function uploadImage(imageFile) {
-        var storageRef = firebase.storage().ref('property_images/' + imageFile.name);
-
-        storageRef.put(imageFile).then(function(snapshot) {
-            snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                imageUrls.push(downloadURL);
-                if (imageUrls.length === propertyImages.length) {
-                    var propertyData = {
-                        rentOrBuy: rentOrBuy,
-                        location: location,
-                        price: price,
-                        bedrooms: bedrooms,
-                        dimensions: dimensions,
-                        releaseDate: releaseDate,
-                        propertyYear: propertyYear,
-                        propertyType: propertyType,
-                        brokerName: brokerName,
-                        propertyTitle: propertyTitle,
-                        propertyImages: imageUrls
-                    };
-
-                    // Send data to Firebase
-                    var propertyRef = firebase.database().ref('properties').push(propertyData);
-                    var propertyId = propertyRef.key;
-
-                    alert('Property added successfully!');
-                }
-            });
+            for (var i = 0; i < propertyImages.length; i++) {
+                uploadImage(propertyImages[i]);
+            }
         });
-    }
-
-    // Upload each selected image
-    for (var i = 0; i < propertyImages.length; i++) {
-        uploadImage(propertyImages[i]);
-    }
-});
     </script>
     <script src="firebase-config.js"></script>
+<--! firebase links may be added later-->
     <script src="property.js"></script>
     <script src="broker.js"></script>
 
