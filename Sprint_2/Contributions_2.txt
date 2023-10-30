@@ -1,0 +1,85 @@
+---------------------------------------------
+Team Contribution Log
+---------------------------------------------
+
+[Ali Zedan]
+
+[Oct-05]
+- [4:15 pm]: [Task-breakdown, creation of issues, and discuss tasks]
+- Time Spent: [2h]
+
+[Oct-06]
+- [4:15 pm]: [Creation of Index file in frontend]
+- Time Spent: [2h]
+
+[Oct-12]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Homepage and signup)]
+- Time Spent: [1h-2h]
+
+[Oct-19]
+- [4:15 pm]: [Continue working on assigned tasks and issues(Homepage and Signup)]
+- Time Spent: [2h-3h]
+
+---------------------------------------------
+[Ryan Rebbas]
+
+[Oct-05]
+- [4:15 pm]: [Creation of issues and discuss Tasks]
+- Time Spent: [2h]
+
+[Oct-12]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Firebase)]
+- Time Spent: [1h-2h]
+
+[Oct-19]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Firebase)]
+- Time Spent: [1h-2h]
+
+[Oct-26]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Firebase)]
+- Time Spent: [1h-2h]
+
+---------------------------------------------
+[Georges Ogeil]
+
+[Oct-05]
+- [4:15 pm]: [Creation of issues and discuss tasks]
+- Time Spent: [2h]
+
+[Oct-12]
+- [4:15 pm]: [Continue working on assigned tasks and issues(Working on Webpages folder contatining Sign-up files)]
+- Time Spent: [1h-2h]
+
+[Oct-19]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Working on Webpages folder, login and sign-up files)]
+- Time Spent: [1h-2h]
+
+[Oct-25]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Working on Webpages folder, login and sign-up files)]
+- Time Spent: [1h-2h]
+[Oct-26]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Working on Webpages folder, and organizing files)]
+- Time Spent: [1h-2h]
+
+---------------------------------------------
+[Kevin Alfredo Jimenez Recinos]
+
+[Oct-05]
+- [4:15 pm]: [Creation of issues and discuss tasks]
+- Time Spent: [2h]
+[Oct-06]
+- [4:15 pm]: [Continue working on assigned tasks and issues(Working on Broker folder containing CRUD functions for broker)]
+- Time Spent: [1h-2h]
+[Oct-12]
+- [4:15 pm]: [Continue working on assigned tasks and issues(Working on broker portal and add properties)]
+- Time Spent: [1h-2h]
+[Oct-19]
+- [4:15 pm]: [Continue working on assigned tasks and issues(Working on broker portal and Properties display)]
+- Time Spent: [1h-2h]
+[Oct-25]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Working on broker Portal, delete and edit functions)]
+- Time Spent: [1h-2h]
+[Oct-26]
+- [4:15 pm]: [Continue working on assigned tasks and issues (Working on broker files, and organizing files)]
+- Time Spent: [1h-2h]
+
