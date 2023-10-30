@@ -1,9 +1,19 @@
-// Assuming you're using Firebase Firestore for data storage
+// Initialize Firebase
+var firebaseConfig = {
+   apiKey: "AIzaSyD2s0r0eAXlBUQ22UEpEpSF6d03FgFsBb0",
+    authDomain: "propertyparadise-83a03.firebaseapp.com",
+    projectId: "propertyparadise-83a03",
+    storageBucket: "propertyparadise-83a03.appspot.com",
+    messagingSenderId: "452198388057",
+    appId: "1:452198388057:web:d4029f9a5678364f8b7c48",
+    measurementId: "G-C7G8NXT1PD"
+};
+
+firebase.initializeApp(firebaseConfig);
+
 var propertyListContainer = document.getElementById('propertyList');
 
-// Function to retrieve properties from Firebase and display them
 function displayProperties() {
-    // Replace 'properties' with your actual collection name in Firestore
     firebase.firestore().collection('properties').get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
@@ -32,21 +42,18 @@ function displayProperties() {
     });
 }
 
-// Function to delete a property
 function deleteProperty(propertyId) {
-    // Replace 'properties' with your actual collection name in Firestore
     firebase.firestore().collection('properties').doc(propertyId).delete()
     .then(function() {
         console.log("Document successfully deleted!");
-        propertyListContainer.innerHTML = ""; // Clear existing properties
-        displayProperties(); // Reload properties after deletion
+        propertyListContainer.innerHTML = "";
+        displayProperties();
     })
     .catch(function(error) {
         console.error("Error removing document: ", error);
     });
 }
 
-// Call the function to display properties when the page loads
 document.addEventListener('DOMContentLoaded', function() {
     displayProperties();
 });
