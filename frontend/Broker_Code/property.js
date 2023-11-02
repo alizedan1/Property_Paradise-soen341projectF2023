@@ -1,8 +1,6 @@
 // Function to retrieve properties for a specific broker
 function displayBrokerProperties() {
     var propertyListContainer = document.getElementById('propertyList');
-    
-    // Replace 'properties' with your actual collection name in Firestore
     firebase.firestore().collection('properties').where('broker_id', '==', 'broker id').get()
     .then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
