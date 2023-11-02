@@ -6,22 +6,15 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
 </style>
 <script src=""></script>
 
-    
-<section id="header">
-    <a id="logo" href="#"><i class="bi bi-shop"></i>Login Page</a>
-        <div>
-            <ul id="navbar">
-            <li><a class="active" href="Admin page.html">My Courses</a></li>
-            </ul>
-        </div>
-</section>
-
-    
 <body>
+
 
     <div class="container-fluid ps-md-0">
         <div class="row g-0">
@@ -32,19 +25,19 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="login-heading mb-4">Welcome back!!!</h3>
+                                <h3 class="login-heading mb-4">Welcome back</h3>
 
                                 <!-- Sign In Form -->
                                 <form>
                                     <div class="form-floating mb-3">
                                         <label for="floatingInput">Email address</label>
-                                        <input type="email" class="form-control" id="floatingInput"
+                                        <input type="email" class="form-control" id="EmailAdress"
                                             placeholder="name@example.com">
 
                                     </div>
                                     <div class="form-floating mb-3">
                                         <label for="floatingPassword">Password</label>
-                                        <input type="password" class="form-control" id="floatingPassword"
+                                        <input type="password" class="form-control" id="Password"
                                             placeholder="Password">
 
                                     </div>
@@ -60,10 +53,13 @@
 
                                     <div class="row">
                                         <div class="col-sm-12 text-center">
-                                            <button id="btnSearch" class="btn btn-primary btn-md center-block"
+                                            <button id="btnLogIn" class="btn btn-primary btn-md center-block"
                                                 Style="width: 100px;" OnClick="btnSearch_Click">Sign In</button>
-                                            <button id="btnClear" class="btn btn-danger btn-md center-block"
-                                                Style="width: 100px;" OnClick="btnClear_Click">Sign Up</button>
+
+
+
+                                            <a href="Sign_up.html">Sign
+                                                Up</a>
                                         </div>
 
                                         <div class="text-center">
@@ -80,6 +76,46 @@
         </div>
     </div>
 
+
+
+
+    <script src="firebase-config.js"></script>
+
+    <script>
+
+        document.getElementById('btnLogIn').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            var Email = document.getElementById('EmailAdress').value;
+            console.log(Email)
+
+            var Password = document.getElementById('Password').value;
+            console.log(Password)
+
+            firebase.auth().signInWithEmailAndPassword(Email, Password).then(r => {
+
+                let UID = r["uid"]
+                firebase.firestore().collection("users").get().then(q => {
+                    q.forEach(d => {
+                        if (d.data()["uid"] == UID) {
+                            if (d.data()["type"] == "Broker") {
+                                window.location.href = 'Broker_Code/broker.html';
+
+                            } else if (d.data()["type"] == "User") {
+                                window.location.href = 'User_Page.html';
+
+                            }
+                        }
+                    })
+                })
+            })
+        })
+
+
+
+
+
+    </script>
 
 </body>
 
