@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>My Uploaded Properties</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../firebase-config.js"></script>
-</head>
-<body>
 
     <script>
-        
-        var propertyListContainer = document.getElementById('propertyList');
         function displayProperties() {
-            firebase.firestore().collection('properties').get()
+            var propertyListContainer = document.getElementById('propertyList');
+
+            firebase.firestore().collection('properties').where('broker_id', '==', "broker id").get()
             .then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     var property = doc.data();
@@ -22,11 +23,11 @@
                             <div class="card">
                                 <img src="${property.propertyImages[0]}" class="card-img-top" alt="Property Image">
                                 <div class="card-body">
-                                <h5 class="card-title">${property.propertyTitle}</h5>
-                                <p>Location: ${property.location}</p>
-                                <p>Price: ${property.price}</p>
-                                <p>Property Year: ${property.propertyYear}</p>
-                                <p>Property Type: ${property.propertyType}</p>
+                                    <h5 class="card-title">${property.propertyTitle}</h5>
+                                    <p>Location: ${property.location}</p>
+                                    <p>Price: ${property.price}</p>
+                                    <p>Property Year: ${property.propertyYear}</p>
+                                    <p>Property Type: ${property.propertyType}</p>
                                     <button class="btn btn-danger" onclick="deleteProperty('${doc.id}')">Delete Property</button>
                                     <a class="btn btn-primary" href="edit_property.html?id=${doc.id}">Edit Property</a>
                                 </div>
@@ -40,78 +41,41 @@
                 console.log("Error getting documents: ", error);
             });
         }
+    </script>
+    <script>
         function deleteProperty(propertyId) {
             firebase.firestore().collection('properties').doc(propertyId).delete()
-            .then(function() {
-                console.log("Document successfully deleted!");
-                propertyListContainer.innerHTML = "";
-                displayProperties();
-            })
-            .catch(function(error) {
-                console.error("Error removing document: ", error);
-            });
+                .then(function() {
+                    console.log("Property successfully deleted!");
+                    location.reload(); // Refresh the page after deletion
+                })
+                .catch(function(error) {
+                    console.error("Error removing property: ", error);
+                });
         }
-        document.addEventListener('DOMContentLoaded', function() {
-            displayProperties();
-        });
     </script>
+</head>
+<body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Broker Portal</a>
     </nav>
 
     <header class="container mt-5 text-center">
-       
         <h1>My Uploaded Properties</h1>
         <p>Manage your uploaded properties here.</p>
-         <script src="firebase-config.js"></script>
-      <!--  <script>
-        just 
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                    // User is signed in
-                    console.log('User is signed in:', user.displayName);
-                } else {
-                    // User is not signed in
-                    console.log('User is not signed in');
-                }
-            });
-        </script>
-        -->
-<!--<?php
-session_start();
-// checks if the user is logged in
-if (!isset($_SESSION['loggedin'])) {
-    // User is not logged in, redirect to the login page
-    header("Location: B_Log_In.php");
-    exit;
-}
-?>
-       // destroys session
-        <a href="B_log_out.php">logout</a>
-<?php
-session_start();
-session_destroy();
-header("Location: B_Log_In.php"); // Redirect to the login page after logout
-exit;
-?>
-
-        -->
     </header>
 
     <div class="container mt-3 text-center">
         <a href="add_property.html" class="btn btn-success">Add New Property</a>
     </div>
 
-    <!-- Property Listings -->
     <div class="container mt-5" id="propertyList">
         <!-- Properties will be added dynamically here with javascript -->
     </div>
 
-    <script src="../firebase-config.js"></script>
-    <script src="property.js"></script>
-    <script src="broker.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"></script>
+    <script>
+        displayProperties(); 
+    </script>
 </body>
 </html>
-
