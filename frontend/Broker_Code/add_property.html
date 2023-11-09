@@ -69,8 +69,20 @@ checkIfUserIsAuthenticated();
             </div>
             <div class="form-group">
                 <label for="propertyType">Property Type</label>
-                <input type="text" class="form-control" id="propertyType" name="propertyType" required>
+                <select class="form-control" id="propertyType" name="propertyType" required>
+                    <option value="Condo">Condo</option>
+                    <option value="Duplex">Duplex</option>
+                    <option value="Triplex">Triplex</option>
+                    <option value="Single Family Home">Single Family Home</option>
+                    <option value="Townhouse">Townhouse</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Villa">Villa</option>
+                    <option value="Mobile Home">Mobile Home</option>
+                    <option value="Studio">Studio</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
+            
             <div class="form-group">
                 <label for="brokerName">Broker's Name</label>
                 <input type="text" class="form-control" id="brokerName" name="brokerName" required>
