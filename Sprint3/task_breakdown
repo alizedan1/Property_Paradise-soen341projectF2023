@@ -1,0 +1,11 @@
+For the search 
+1.Retrieve the data from the firestore database when the page loads.
+2.Save all the data in a json object
+3.when the user enters a search query and clicks the the button, implement a function that triggers on onCLick that will take the query, loop through
+the JSON object, and filter using a filtering algorithm.
+4.display the filtered data
+
+For the submit offer
+1.when the user on submit, get the value of each input box
+2. retreive the Broker information from the firestore
+2.use an API and call GET with the value and parameters to send the data to the Notification API to send a notification to the broker
