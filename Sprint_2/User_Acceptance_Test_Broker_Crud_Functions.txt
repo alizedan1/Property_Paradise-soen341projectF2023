@@ -1,0 +1,47 @@
+User Acceptance Test: Broker CRUD Functionalities
+
+Preconditions: The user must be logged into his account (But to know the CRUD functionalities is the important thing).
+
+Steps:
+
+1) Add a property with different characteristics
+- Go to the broker portal
+- Use the add property button
+- Fill in the form with the different characteristics of the property
+- Submit the form and wait for the system confirmation
+- Return to the Broker Portal
+
+Result: The box with confirmation that the property was added was succesful. After checking database the property was added
+correctly.
+
+2) Check that the properties are displayed in the Broker's Portal
+- When you go back to the Broker Portal check that the properties you have added are displayed
+
+Result: The properties added are correctly displayed in the portal. Description and first images is as well correctly displayed.
+
+3) Edit a property
+- Go to one of the properties you have added and click the Edit button
+- Edit the property features you need to update.
+- Click on the Submit button 
+- Wait for confirmation and return to the portal
+
+Result: The property which was modified was currectly updated in the database.
+
+4) Delete a property
+- Go to your real estate agent portal
+- Use the delete button on one of the properties
+- The property has been deleted
+
+Result: The property was correctly deleted in the database and dissapeared from the broker portal.
+
+Subsequent conditions: The functionalities have been successfully updated in the database and the user sees the changes displayed.
+displayed.
+
+Notes:
+This is the first phase of acceptance testing, login may not be a precondition met yet.
+Once the login is done each user will have their own user-id so now a test-id can be used to do the acceptance test. 
+
+After testing:
+CRUD functions worked as expected, the user was able to add, view, edit and delete properties. As mentioned a unique user id with login,
+is to be tested in the future, but the CRUD functions worked as expected by the test.
+

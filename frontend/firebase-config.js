@@ -1,4 +1,5 @@
 // Initialize Firebase
+
 var firebaseConfig = {
     apiKey: "AIzaSyD2s0r0eAXlBUQ22UEpEpSF6d03FgFsBb0",
     authDomain: "propertyparadise-83a03.firebaseapp.com",

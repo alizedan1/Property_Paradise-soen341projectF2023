@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+</script>
+<style>
+</style>
+<script src=""></script>
+
+<body>
+
+
+    <div class="container-fluid ps-md-0">
+        <div class="row g-0">
+            <div class="d-none d-md-flex col-md-4 col-lg-6" id="bg-image">
+            </div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="login-heading mb-4">Sign Up</h3>
+
+                                <!-- Sign In Form -->
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <label for="EmailAdress">Email address</label>
+                                        <input type="email" class="form-control" id="EmailAdress"
+                                            placeholder="name@example.com">
+
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <label for="FirstName">First Name</label>
+                                        <input type="text" class="form-control" id="FirstName" placeholder="First Name">
+
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <label for="LastName">Last Name</label>
+                                        <input type="text" class="form-control" id="LastName" placeholder="Last Name">
+
+                                    </div>
+
+                                    <div class="pd-ltr-20 customscroll customscroll-10-p height-auto xs-pd-20-10">
+                                        <div class="min-height-200px">
+                                            <div class="mb-30">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <small class="form-floating mb-3">Select Type </small>
+                                                            <div class="custom-file">
+                                                                <select class="font-14 selectpicker form-control"
+                                                                    data-width="100%" id="Select_Dropdown">
+                                                                    <option value="None" id="None"> --- </option>
+                                                                    <option value="User" id="User"> User </option>
+                                                                    <option value="Broker" id="Broker"> Broker
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <label for="Password"> New Password</label>
+                                        <input type="password" class="form-control" id="Password"
+                                            placeholder="New Password">
+
+                                    </div>
+
+
+
+
+                                    <div class="row">
+                                        <div class="col-sm-12 text-center">
+
+                                            <button id="btnClear" class="btn btn-danger btn-md center-block"
+                                                Style="width: 100px;">Sign
+                                                Up</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="firebase-config.js"></script>
+
+
+
+    <script>
+
+
+        document.getElementById('btnClear').addEventListener('click', function (e) {
+            e.preventDefault();
+            var Email = document.getElementById('EmailAdress').value;
+            console.log(Email)
+
+            var FirstName = document.getElementById('FirstName').value;
+            console.log(FirstName)
+
+            var LastName = document.getElementById('LastName').value;
+            console.log(LastName)
+
+            var Type = document.getElementById('Select_Dropdown').value;
+            console.log(Type)
+
+            var Password = document.getElementById('Password').value;
+            console.log(Password)
+
+            firebase.auth().createUserWithEmailAndPassword(Email, Password).then(r => {
+
+                let userData = {
+
+                    email: Email,
+                    firstname: FirstName,
+                    lastname: LastName,
+                    type: Type,
+                    password: Password,
+                    uid: r["uid"]
+
+                }
+                firebase.firestore().collection('users').add(userData).then(q => {
+
+
+                    if (Type == "User") {
+
+                        window.location.href = 'User_Page.html';
+
+
+                    } else {
+
+                        window.location.href = 'Broker_Code/broker.html';
+
+                    }
+
+                })
+
+
+
+            })
+
+
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -17,7 +17,7 @@ Team Contribution Log
 - Time Spent: [1h-2h]
 
 [Oct-19]
-- [4:15 pm]: [Continue working on assigned tasks and issues(Homepage and Signup)]
+- [4:15 pm]: [Continue working on assigned tasks and issues(Homepage and Signup) And admin page]
 - Time Spent: [2h-3h]
 
 ---------------------------------------------

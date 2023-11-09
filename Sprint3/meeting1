@@ -1,0 +1,16 @@
+November 2 2023:
+
+Attendees:
+Ali Zedan 
+Ryan Rebbas 
+Kevin Alfredo Jimenez Recinos
+Georges Ogeil
+
+Points discussed during meeting: 
+
+1.Sign up/Authentication and how it relates to the broker implementation. Each broker needs an ID to be able to display real estate that he 
+owns which is why we discussed how to implement the database layout and code synchronization between authentication and database/frontend diplaying the 
+data correctly
+
+Next meeting objectives: 
+Submit offer 
