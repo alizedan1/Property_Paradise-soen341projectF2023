@@ -15,18 +15,20 @@
     </nav>
 
     <header class="container mt-5 text-center">
-     <!--  <script>
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                    // User is signed in
-                    console.log('User is signed in:', user.displayName);
-                } else {
-                    // User is not signed in
-                    console.log('User is not signed in');
-                }
-            });
+        <script>
+            function checkIfUserIsAuthenticated() {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // User is signed in
+            displayProperties(); // Function to display properties
+        } else {
+            // No user is signed in, redirect to login page
+            window.location.href = 'login.html';
+        }
+    });
+}
+checkIfUserIsAuthenticated();
         </script>
-        -->
         <h1>Add New Property</h1>
         <p>Provide all the details of the Property</p>
     </header>
@@ -99,6 +101,7 @@
 
 
     <script>
+
         document.getElementById('propertyForm').addEventListener('submit', function(e) {
             e.preventDefault();
             var rentOrBuy = document.getElementById('rentOrBuy').value;
@@ -119,6 +122,17 @@
                 $('#main-submit-div').replaceWith(`<div id="main-submit-div"><div class="spinner-border text-primary" role="status">
   <span class="sr-only"></span>
 </div> </div>`)
+
+function getCurrentUserId() {
+  var user = firebase.auth().currentUser;
+  
+  if (user) {
+    
+    return user.uid;
+  } else {
+    return null; // No user is signed in.
+  }
+}
                 var storageRef = firebase.storage().ref('property_images/' + imageFile.name);
                 storageRef.put(imageFile).then(function(snapshot) {
                     snapshot.ref.getDownloadURL().then(function(downloadURL) {
@@ -137,7 +151,7 @@
                                 propertyTitle: propertyTitle,
                                 description: description,
                                 propertyImages: imageUrls,
-                                broker_id: "broker id"
+                                broker_id: getCurrentUserId()
                             };
                             console.log('reached end');
 
