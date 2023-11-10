@@ -82,11 +82,6 @@ checkIfUserIsAuthenticated();
                     <option value="Other">Other</option>
                 </select>
             </div>
-            
-            <div class="form-group">
-                <label for="brokerName">Broker's Name</label>
-                <input type="text" class="form-control" id="brokerName" name="brokerName" required>
-            </div>
             <div class="form-group">
                 <label for="propertyTitle">Property Title</label>
                 <input type="text" class="form-control" id="propertyTitle" name="propertyTitle" required>
@@ -124,7 +119,6 @@ checkIfUserIsAuthenticated();
             var releaseDate = document.getElementById('releaseDate').value;
             var propertyYear = document.getElementById('propertyYear').value;
             var propertyType = document.getElementById('propertyType').value;
-            var brokerName = document.getElementById('brokerName').value;
             var propertyTitle = document.getElementById('propertyTitle').value;
             var description = document.getElementById('description').value;
             var propertyImages = document.getElementById('propertyImages').files;
@@ -135,16 +129,47 @@ checkIfUserIsAuthenticated();
   <span class="sr-only"></span>
 </div> </div>`)
 
+var broker_name;
 function getCurrentUserId() {
   var user = firebase.auth().currentUser;
   
   if (user) {
-    
+    console.log(user.uid);
     return user.uid;
   } else {
     return null; // No user is signed in.
   }
 }
+var name ="";
+function fetchSpecificFieldByUid(uid, fieldName) {
+  return firebase.firestore().collection('users').where('uid', '==', uid).get()
+    .then(function(querySnapshot) {
+      return new Promise(function(resolve, reject) {
+        if (!querySnapshot.empty) {
+          var fieldValue = querySnapshot.docs[0].get(fieldName);
+
+          if (fieldValue !== undefined && typeof fieldValue === 'string') {
+            // We get the field value
+            name = fieldValue;
+            resolve(fieldValue);
+          } else {
+            reject("Field not found or is not a string in user document.");
+          }
+        } else {
+          reject("No user found with the given UID.");
+        }
+      });
+    })
+    .catch(function (error) {
+      console.log("Error getting user by UID:", error);
+      return Promise.reject(error);
+    });
+}
+
+var nameField = fetchSpecificFieldByUid(getCurrentUserId(),"firstname");
+
+
+
                 var storageRef = firebase.storage().ref('property_images/' + imageFile.name);
                 storageRef.put(imageFile).then(function(snapshot) {
                     snapshot.ref.getDownloadURL().then(function(downloadURL) {
@@ -159,7 +184,7 @@ function getCurrentUserId() {
                                 releaseDate: releaseDate,
                                 propertyYear: propertyYear,
                                 propertyType: propertyType,
-                                brokerName: brokerName,
+                                brokerName: name,
                                 propertyTitle: propertyTitle,
                                 description: description,
                                 propertyImages: imageUrls,
