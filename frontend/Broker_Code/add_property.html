@@ -111,14 +111,14 @@ checkIfUserIsAuthenticated();
 
         document.getElementById('propertyForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            var rentOrBuy = document.getElementById('rentOrBuy').value;
-            var location = document.getElementById('location').value;
+            var rentOrBuy = document.getElementById('rentOrBuy').value.toLowerCase();
+            var location = document.getElementById('location').value.toLowerCase();
             var price = document.getElementById('price').value;
             var bedrooms = document.getElementById('bedrooms').value;
             var dimensions = document.getElementById('dimensions').value;
             var releaseDate = document.getElementById('releaseDate').value;
             var propertyYear = document.getElementById('propertyYear').value;
-            var propertyType = document.getElementById('propertyType').value;
+            var propertyType = document.getElementById('propertyType').value.toLowerCase();
             var propertyTitle = document.getElementById('propertyTitle').value;
             var description = document.getElementById('description').value;
             var propertyImages = document.getElementById('propertyImages').files;
@@ -184,7 +184,7 @@ var nameField = fetchSpecificFieldByUid(getCurrentUserId(),"firstname");
                                 releaseDate: releaseDate,
                                 propertyYear: propertyYear,
                                 propertyType: propertyType,
-                                brokerName: name,
+                                brokerName: name.toLowerCase(),
                                 propertyTitle: propertyTitle,
                                 description: description,
                                 propertyImages: imageUrls,
