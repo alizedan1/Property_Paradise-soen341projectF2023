@@ -143,7 +143,7 @@
                 firebase.firestore().collection('users').add(userData).then(q => {
 
 
-                    if (Type == "User") {
+                    if (Type === "User") {
 
                         window.location.href = 'user_page.html';
 
