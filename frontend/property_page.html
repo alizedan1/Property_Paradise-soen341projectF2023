@@ -10,6 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase-firestore.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="firebase-config.js"></script>
+    
 </head>
 
 <body>
@@ -25,6 +26,9 @@
         </div>
         <a class="btn btn-secondary" href="javascript:history.back()">Back to Search Results</a>
     </div>
+
+    <script src= "https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var urlParams = new URLSearchParams(window.location.search);
@@ -63,6 +67,8 @@
                                 <p class="property-info">Property Type: ${propertyData.propertyType}</p>
                                 <p class="property-info">Property Broker: ${propertyData.brokerName}</p>
                                 <p class="property-info">Description: ${propertyData.description}</p>
+                                <input type="text" id= "BrokerEmail"/> 
+                                <button onclick="SendBrokerEmail('${propertyData.broker_id}')"> Send Email </button>
                                 <!-- Add more details as needed -->
                                 ${propertyData.rentOrBuy.toLowerCase() === 'buy' ? `
                                     <div>
@@ -99,6 +105,87 @@
             const monthlyPayment = (principal * interestRate) / (1 - Math.pow(1 + interestRate, -numberOfPayments));
             document.getElementById('mortgageResult').innerText = `Monthly Mortgage Payment: $${monthlyPayment.toFixed(2)}`;
         }
+        
+        function sendEmail(BrokerID){
+            
+            
+        }
+
+     
+
+        
+
+        function SendBrokerEmail(BrokerID){
+            let UserEmail
+            let BrokerEmail
+            const EmailText = document.getElementById('BrokerEmail').value;
+            const UserID = firebase.auth().currentUser.uid;
+            firebase.firestore().collection('users').where('uid', '==', UserID).get().then(querySnapShot=> {
+                querySnapShot.forEach(query=>{
+                    UserEmail= query.data()['email']
+                    firebase.firestore().collection('users').where('uid', '==', BrokerID).get().then(querySnapShot2=> {
+
+                        querySnapShot2.forEach(query2=>{
+                            BrokerEmail= query2.data()['email']
+                            console.log(BrokerEmail)
+                            console.log(UserEmail)
+                            console.log(EmailText)
+
+                            emailjs.init("-3oMJCRwOmY0lb6pd");
+                        var params = {
+                            sendername: "User Message",
+                            to: BrokerEmail,
+                            subject: "New Inquiry",
+                            replyto: UserEmail,
+                            message: EmailText,
+                    };
+
+                            var serviceID = "service_rb51k9f"; // Email Service ID
+                            var templateID = "template_kbgshae"; // Email Template ID
+
+                            emailjs.send(serviceID, templateID, params)
+                            .then( res => {
+                                alert("Email sent successfully!!")
+                            })
+                            .catch();
+
+                        })
+
+                            
+                       /**
+                            Email.send({
+
+                            Host : "smtp.elasticemail.com",
+
+                            
+                            Username : "propertyparadise17@gmail.com",
+                            
+                            Password : "B03BDF0D4C498041970A8EC332A0E948AD66",
+                            port: 2525,
+
+                        
+                            To : BrokerEmail,
+                            From : UserEmail,
+                            Subject : "New Inquiry",
+                            Body : EmailText
+                        }).then(
+                        message => alert(message)
+                        );
+                        })**/
+                      
+
+                    })
+                })
+                
+            })
+                
+
+            
+
+        
+
+        }
+        
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
