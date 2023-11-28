@@ -1,1 +1,14 @@
+Title: Mortgage calculator Unit Test
+
+function calculateMortgage() {
+            const homePrice = document.getElementById('homePrice').value;
+            const downPayment = document.getElementById('downPayment').value;
+            const loanTerm = document.getElementById('loanTerm').value;
+            const interestRate = document.getElementById('interestRate').value / 100 / 12;
+            const principal = homePrice - downPayment;
+            const numberOfPayments = loanTerm * 12;
+            const monthlyPayment = (principal * interestRate) / (1 - Math.pow(1 + interestRate, -numberOfPayments));
+            document.getElementById('mortgageResult').innerText = `Monthly Mortgage Payment: $${monthlyPayment.toFixed(2)}`;
+        }
+
 
