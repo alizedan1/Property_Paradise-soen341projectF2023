@@ -1,0 +1,32 @@
+Title: Firebase unit test
+
+// firebase.test.js
+
+const test = require('firebase-functions-test')();
+
+// Mock Firebase configuration
+jest.mock('firebase', () => {
+  const initializeApp = jest.fn();
+  return { initializeApp };
+});
+
+// Import the Firebase configuration code
+require('./your-firebase-config-file');
+
+describe('Firebase Configuration', () => {
+  it('should initialize Firebase with the correct configuration', () => {
+    // Expectations
+    expect(require('firebase').initializeApp).toHaveBeenCalledWith({
+      apiKey: 'AIzaSyD2s0r0eAXlBUQ22UEpEpSF6d03FgFsBb0',
+      authDomain: 'propertyparadise-83a03.firebaseapp.com',
+      projectId: 'propertyparadise-83a03',
+      storageBucket: 'propertyparadise-83a03.appspot.com',
+      messagingSenderId: '452198388057',
+      appId: '1:452198388057:web:d4029f9a5678364f8b7c48',
+      measurementId: 'G-C7G8NXT1PD',
+    });
+  });
+});
+
+// Cleanup
+test.cleanup();
