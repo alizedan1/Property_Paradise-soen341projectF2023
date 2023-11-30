@@ -1,4 +1,4 @@
-User Acceptance Test: Broker CRUD Functionalities
+User Acceptance Test: Broker CRUD Functionalities on Properties
 
 Preconditions: The user must be logged into his account (But to know the CRUD functionalities is the important thing).
 
