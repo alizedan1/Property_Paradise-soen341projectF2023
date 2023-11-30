@@ -1,1 +1,102 @@
-Title: 
+Title: Edit property unit test
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content... -->
+</head>
+<body>
+    <!-- Body content... -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="edit_property.js"></script>
+</body>
+</html>
+
+
+
+Separate JavaScript file (edit_property.js) for the logic:
+
+// edit_property.js
+document.addEventListener('DOMContentLoaded', function () {
+    loadPropertyDetails();
+});
+
+document.getElementById('propertyForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    updateProperty();
+});
+
+function loadPropertyDetails() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var propertyId = urlParams.get('id');
+
+    if (propertyId) {
+        fetchPropertyDetails(propertyId)
+            .then(function (propertyData) {
+                populateForm(propertyData);
+            })
+            .catch(function (error) {
+                console.error("Error loading property details:", error);
+            });
+    }
+}
+
+function fetchPropertyDetails(propertyId) {
+    return firebase.firestore().collection('properties').doc(propertyId).get()
+        .then(function (doc) {
+            if (doc.exists) {
+                return doc.data();
+            } else {
+                console.log("No such document!");
+                return Promise.reject("No such document!");
+            }
+        })
+        .catch(function (error) {
+            console.log("Error getting document:", error);
+            return Promise.reject(error);
+        });
+}
+
+function populateForm(propertyData) {
+    // Populate form fields with propertyData
+    document.getElementById('title').value = propertyData.propertyTitle;
+    document.getElementById('description').value = propertyData.description;
+    document.getElementById('price').value = propertyData.price;
+    document.getElementById('bedrooms').value = propertyData.bedrooms;
+    document.getElementById('dimensions').value = propertyData.dimensions;
+    document.getElementById('releaseDate').value = propertyData.releaseDate;
+    document.getElementById('propertyYear').value = propertyData.propertyYear;
+    document.getElementById('propertyType').value = propertyData.propertyType;
+}
+
+function updateProperty() {
+    var updatedPropertyData = {
+        propertyTitle: document.getElementById('title').value,
+        description: document.getElementById('description').value,
+        price: document.getElementById('price').value,
+        bedrooms: document.getElementById('bedrooms').value,
+        dimensions: document.getElementById('dimensions').value,
+        releaseDate: document.getElementById('releaseDate').value,
+        propertyYear: document.getElementById('propertyYear').value,
+        propertyType: document.getElementById('propertyType').value,
+    };
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var propertyId = urlParams.get('id');
+
+    if (propertyId) {
+        updatePropertyInFirestore(propertyId, updatedPropertyData)
+            .then(function () {
+                console.log("Property successfully updated!");
+                alert('Property was updated successfully!');
+            })
+            .catch(function (error) {
+                console.error("Error updating document: ", error);
+                $('#error-msg').text("Failed to update data");
+            });
+    }
+}
+
+function updatePropertyInFirestore(propertyId, updatedPropertyData) {
+    return firebase.firestore().collection('properties').doc(propertyId).update(updatedPropertyData);
+}
