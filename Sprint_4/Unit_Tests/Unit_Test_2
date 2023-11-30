@@ -1,4 +1,4 @@
-"add_property.html" Property function, which encapsulates the logic for adding a property.
+Title: Add property function (add_property.html), which encapsulates the logic for adding a property.
 
 <script src="../firebase-config.js"></script>
 
