@@ -1,4 +1,4 @@
-Title: Add property function (add_property.html), which encapsulates the logic for adding a property.
+Title: Add property function unit test.
 
 <script src="../firebase-config.js"></script>
 
