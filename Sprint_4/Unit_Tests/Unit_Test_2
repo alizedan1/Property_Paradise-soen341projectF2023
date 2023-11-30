@@ -1,0 +1,42 @@
+"add_property.html" Property function, which encapsulates the logic for adding a property.
+
+<script src="../firebase-config.js"></script>
+
+<script>
+    function uploadProperty(propertyData, imageFiles) {
+        // The entire logic for uploading a property goes here
+        // ...
+
+        // Return a promise that resolves when the property is successfully uploaded
+        return new Promise((resolve, reject) => {
+            // ...
+            // Your existing code for uploading images and property data
+            // ...
+
+            // Resolve or reject based on success or failure
+            // ...
+        });
+    }
+
+    document.getElementById('propertyForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Extract form data
+
+        var propertyData = {
+            // Extracted form data
+        };
+
+        var imageFiles = document.getElementById('propertyImages').files;
+
+        uploadProperty(propertyData, imageFiles)
+            .then(() => {
+                // Do something on success, maybe redirect to another page
+                alert('Property was added successfully!');
+            })
+            .catch((error) => {
+                console.error('Error while adding property:', error);
+                // Update the UI to show an error message
+                $('#error-msg').text('Failed to send data');
+            });
+    });
+</script>
