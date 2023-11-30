@@ -1,0 +1,41 @@
+Title: Sign Up page unit test.
+The main logic is encapsulated within this function, making it easier to test without dealing with the DOM directly. 
+
+
+document.getElementById('btnClear').addEventListener('click', function (e) {
+    e.preventDefault();
+    signUp();
+});
+
+function signUp() {
+    var email = document.getElementById('EmailAdress').value;
+    var firstName = document.getElementById('FirstName').value;
+    var lastName = document.getElementById('LastName').value;
+    var type = document.getElementById('Select_Dropdown').value;
+    var password = document.getElementById('Password').value;
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(response => {
+            const userData = {
+                email: email,
+                firstname: firstName,
+                lastname: lastName,
+                type: type,
+                password: password,
+                uid: response.uid
+            };
+
+            return firebase.firestore().collection('users').add(userData);
+        })
+        .then(() => {
+            if (type === "User") {
+                window.location.href = 'user_page.html';
+            } else {
+                window.location.href = 'Broker_Code/broker.html';
+            }
+        })
+        .catch(error => {
+            console.error('Error during sign up:', error);
+            // Handle the error, show it to the user, etc.
+        });
+}
