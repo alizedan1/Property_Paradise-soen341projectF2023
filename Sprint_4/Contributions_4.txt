@@ -1,1 +1,60 @@
 
+---------------------------------------------
+Team Contribution Log
+---------------------------------------------
+
+[Ali Zedan]
+
+[Nov-18]
+
+[4:15 pm]: [works in code with Ryan]
+
+[Nov-24]
+
+[4:15 pm]: [Works in code with Ryan]
+Time Spent: [2h]
+
+---------------------------------------------
+[Ryan Rebbas]
+
+[Nov-18]
+
+[4:15 pm]: [works in code with Ali]
+Time Spent: [2h]
+
+[Nov-24]
+
+[4:15 pm]: [Works in code with Ali]
+Time Spent: [2h]
+
+---------------------------------------------
+[Georges Ogeil]
+
+[Nov-16]
+
+[4:15 pm]: [Conduct testing for admin page functionalities and continue working on documentation]
+Time Spent: [2h]
+
+[Nov-18]
+[4:15 pm]: [Cotinues working on finishing for final presentation and documentation]
+Time Spent: [2h]
+
+[Nov-24]
+
+[4:15 pm]: [works on documentation for final presentation and code as well]
+Time Spent: [2h]
+
+---------------------------------------------
+[Kevin Jimenez]
+
+[Nov-16]
+[7:00 pm]: [Continues working on finishing code for final presentation]
+Time Spent: [2h]
+
+[Nov-18]
+[5:00 pm]: [Continues working on finishing the code for final presentation]
+Time Spent: [4h]
+
+[Nov-24]
+[9:am]: [Continues working on finishing the code for final presentation and documentation, all parts]
+Time Spent: [12h]
