@@ -1,0 +1,22 @@
+Acceptance Test: Mortgage Calculator Functionality
+
+Preconditions: The user is on the mortgage calculator page.
+
+Steps:
+
+1) Calculate the monthly mortgage payment.
+- Enter the house price, down payment, loan term in years and interest rate.
+- Click on the "Calculate Mortgage" button.
+- Verify that the system displays the calculated monthly payment.
+
+Result: The system correctly calculates and displays the monthly mortgage payment. The amount displayed matches the expected value based on the data entered.
+
+2) Test scenarios with different combinations of inputs
+- Perform additional calculations with different combinations of inputs, including different house prices, down payments, loan terms and interest rates.
+- Verify that the system calculates and displays consistently
+
+Result: The system handles various input combinations correctly, providing accurate and consistent results for different mortgage scenarios.
+
+Subsequent conditions: The calculated mortgage payment and amortization schedule are accurate, and the user can interact with the calculator to obtain updated results based on different input values.
+
+Notes: This acceptance test focuses on the accuracy and reliability of the mortgage calculator calculations in various scenarios and extreme cases.

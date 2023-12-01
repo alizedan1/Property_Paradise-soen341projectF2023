@@ -1,0 +1,35 @@
+Acceptance Test: Express interest in the property and send an email to the administrator.
+
+Prerequisites: The user is on the property details page.
+
+Steps:
+
+1) Locate the "Send Email" button.
+   - Go to the property details page.
+   - Locate the "Send Email" button.
+
+   Result: The system displays a visible and accessible "Send Email" button on the property detail page.
+
+2) Click on the "Send Email" button.
+   - Click on the "Send Email" button to express interest in the property.
+
+   Result: The system processes the user's interest and initiates email notification to the property manager.
+
+3) Verify the email sent to the manager
+   - Check if the notification email is in the manager's inbox.
+   - Check that the email contains relevant information about the user's interest and details about the property.
+
+   Result: The system correctly sends an email to the manager when the user expresses interest in the property, and the content of the email is accurate and informative.
+
+4) Check for confirmation to the user
+   - after expressing interest, verify if there is a confirmation message to the user that their interest has been received.
+
+   Result: The system confirms to the user that their interest has been successfully registered.
+
+Subsequent conditions: The user can express interest in a property and send an email notification to the administrator.
+
+Notes: This acceptance test is to verify the interest in a property email button, ensuring that the email notification to the administrator and the user's confirmation are handled properly.
+
+Translated with DeepL.com (free version)
+
+

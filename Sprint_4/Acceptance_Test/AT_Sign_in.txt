@@ -1,0 +1,44 @@
+Acceptance test: User Sign_in and navigation to the user page.
+
+Preconditions: The user is on the Sign_in page.
+
+Steps:
+
+1) Enter valid credentials.
+   - Go to the login page.
+   - Enter a valid email address and password.
+   - Click on the "Sign_in" button.
+
+   Result: The system authenticates the user with Firebase using the provided credentials.
+
+2) Login verification
+   - After clicking "Sign_in", verify that the user has successfully logged in.
+   - Check if there are any error messages indicating failed login attempts.
+
+   Result: The system logs the user in correctly without any error messages.
+
+3) Check user's page is directed to correct page.
+   - After successful login, check the navigation to the user page.
+   - Make sure that the user is redirected to the user page.
+
+   Result: The system correctly navigates the user to the user page after successful login.
+
+4) Verify user information in Firebase
+   - Access the Firebase database to verify that the user information (email, user ID, credentials) has been loaded correctly at sign_in.
+   - Verify that the user's authentication status is marked as logged in.
+
+Result: User information is successfully stored in Firebase and the authentication status is updated to reflect the login status.
+
+5) Login test with incorrect credentials
+   - Go to the login page.
+   - Enter incorrect credentials (e.g. incorrect password).
+   - Click on the "Login" button.
+
+   Result: The system should display an error message indicating that the login attempt failed due to incorrect credentials.
+
+
+Postconditions: User successfully logs in and the system successfully navigates to the user page. The user's information is correctly 
+stored in Firebase. Unsuccessful login attempts are handled appropriately.
+
+Notes: The focus of this acceptance test is to ensure that the login process is secure and accurate, including authentication of the 
+user with Firebase and proper navigation to the user page after successful login.
