@@ -1,0 +1,39 @@
+Acceptance test: Broker filter on the user page.
+
+Preconditions: User is on the user page.
+
+Steps:
+
+1) Locate the Broker Filter section.
+   - Go to the user page.
+   - Locate the Broker filter.
+
+   Result: The system displays a filter to filter properties by broker.
+
+2) Enter the broker name in the filter.
+   - In the filter by broker section, enter the name of a specific broker.
+   - Press the "Filter" button to apply the filter.
+
+   Result: The system processes the filter request and updates the displayed properties to show only those associated with the specified broker.
+
+3) Verify the filtered properties
+   - Check the properties displayed after applying the broker filter.
+   - Make sure that only the properties associated with the specified broker are displayed.
+
+   Result: The system correctly filters and displays the properties associated with the specified broker, and all other properties are hidden.
+
+4) Delete broker filter
+   - Delete the broker name from the filter
+   - Press the "Filter" button again.
+
+   Result: The system resets the filter, showing all properties regardless of the broker.
+
+5) Testing the filter with a non-existing broker
+   - Enter the name of a broker that does not exist in the system.
+   - Click on the "Filter" button.
+
+   Result: The system handles non-existing brokers.
+
+Postconditions: The user can effectively use the broker filter to search for properties by broker name on the user page.
+
+Notes: The focus of this acceptance test is on the functionality and user experience of searching for properties by broker name.
